@@ -2,4 +2,10 @@ image:
   file: Dockerfile
 ports:
   - port: 6080
-    protocol: "http"
+    name: "VNC"
+
+tasks:
+  - name: Build
+    before: autogen.sh
+    init: ./configure
+    command: make -j16
