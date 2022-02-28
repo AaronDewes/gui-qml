@@ -7,4 +7,4 @@ ports:
 tasks:
   - name: Build
     before: ./autogen.sh && ./configure
-    init: make -j16
+    command: make -j16
